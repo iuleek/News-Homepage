@@ -1,0 +1,163 @@
+﻿body {
+    background-color: #fff;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+h1 {
+    font-weight: 900;
+    
+}
+p {
+    color: hsl(236, 13%, 42%);
+}
+br {
+    color: #fff;
+}
+.trend a:hover, .navbar-nav .nav-item:hover .nav-link {
+    color: hsl(5, 85%, 63%);
+}
+
+    button:hover {
+    background-color: black;
+}
+
+.button {
+    background-color: hsl(5, 85%, 63%);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+}
+#page {
+    height: 96vh; /*How to Give a Div Element 100% Height of the Browser Window*/
+    display: flex;
+}
+    #page .container {
+        display: grid;
+        padding: 5% 7% 5% 7%;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        grid-template-areas:
+            'navbar navbar navbar'
+            'title-image title-image new'
+            'title-text read-more new'
+            'trending trending trending'
+            'atribution atribution atribution'
+    }
+
+.navbar {
+    padding: 5% 7% 0% 7%;
+}
+.title-image {
+    grid-area: title-image;
+}
+.new {
+    grid-area: new;
+    background-color:black;
+    color: white;
+    padding: 7% 5%;
+}
+    .new h3 {
+        color: hsl(35, 77%, 62%);
+        font-weight: 600;
+        padding-bottom: 3%;
+    }
+    .new h6 {
+        font-weight: 600;
+    }
+    .new p, hr {
+        color: hsl(233, 8%, 79%);
+        padding-bottom: 5%;
+    }
+   
+.title-text {
+    grid-area: title-text;
+    width:70%;
+    letter-spacing:0.1rem;
+}
+.read-more {
+    grid-area: read-more;
+    width: 100%
+}
+.trending {
+    grid-area: trending;
+    padding: 7% 0% 7%;
+    grid-column-gap: 5px;
+}
+.trending img{
+    float:left;
+    padding-right: 5%;
+    width: 130px;
+    height: 160px;
+}
+.trend {
+    padding: 0 3% 0% 3%;
+}
+.trend h3 {
+    color: hsl(233, 8%, 79%);
+    font-weight: 600;
+}
+.trend p {
+    color: hsl(236, 13%, 42%) ;
+    line-height: 1.5;
+    padding: 3% 0%;
+}
+    .trend a {
+        font-weight: 900;
+        text-decoration: none;
+        color: black;
+    }
+.row {
+    --bs-gutter-x: 5.5rem;
+}
+.title-image img {
+    width: 100%;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    grid-area:atribution;
+    padding-bottom: 3%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 768px) {
+    #page .container {
+        display: block;
+        grid-template-areas:
+            'title-image'
+            'title-text'
+            'read-more'
+            'new'
+            'trending';
+    }
+    .title-image,
+    .title-text,
+    .read-more,
+    .new,
+    .trending,
+    .attribution {
+        width: 100%;
+    }
+    #page {
+        height: auto;
+        padding: 20px;
+    }
+    .trending {
+        padding: 10% 9% 15%;
+    }
+    .trend, .title-image, .title-text, .read-more, .new {
+        padding-bottom: 7%;
+    }
+    .read-more, .new {
+        padding-bottom: 15%;
+    }
+}
